@@ -1,0 +1,265 @@
+:root {
+  --color-blue-hue: 223;
+  --color-blue-sat: 87%;
+  --color-blue-light: 63%;
+  --color-blue: var(--color-blue-hue) var(--color-blue-sat)
+    var(--color-blue-light);
+
+  --color-pale-blue-hue: 223;
+  --color-pale-blue-sat: 100%;
+  --color-pale-blue-light: 88%;
+  --color-pale-blue: var(--color-pale-blue-hue) var(--color-pale-blue-sat)
+    var(--color-pale-blue-light);
+
+  --color-light-red-hue: 354;
+  --color-light-red-sat: 100%;
+  --color-light-red-light: 66%;
+  --color-light-red: var(--color-light-red-hue) var(--color-light-red-sat)
+    var(--color-light-red-light);
+
+  --color-gray-hue: 0;
+  --color-gray-sat: 0%;
+  --color-gray-light: 59%;
+  --color-gray: var(--color-gray-hue) var(--color-gray-sat)
+    var(--color-gray-light);
+
+  --color-very-dark-blue-hue: 209;
+  --color-very-dark-blue-sat: 33%;
+  --color-very-dark-blue-light: 12%;
+  --color-very-dark-blue: var(--color-very-dark-blue-hue)
+    var(--color-very-dark-blue-sat) var(--color-very-dark-blue-light);
+
+  --fontSize3XSmall: 0.4rem;
+  --fontSize3XSmall: 0.5rem;
+  --fontSize2XSmall: 0.5rem;
+  --fontSizeXSmall: 0.75rem;
+  --fontSizeSmall: 0.875rem;
+  --fontSize: 1rem;
+  --fontSizeMedium: 1.25rem;
+  --fontSizeLarge: 1.5rem;
+  --fontSizeXLarge: 1.75rem;
+  --fontSize2XLarge: 2rem;
+  --fontSize3XLarge: 2.5rem;
+  --fontSize4XLarge: 3rem;
+  --fontSize5XLarge: 3.5rem;
+  --fontSize6XLarge: 4rem;
+  --fontSize7XLarge: 4.5rem;
+  --fontSize8XLarge: 5rem;
+  --fontSize9XLarge: 5.5rem;
+  --fontSize10XLarge: 6rem;
+  --fontSize11XLarge: 6.5rem;
+  --fontSize12XLarge: 7rem;
+  --fontSize13XLarge: 7.5rem;
+  --fontSize14XLarge: 8rem;
+
+  --fontFamily: "Libre Franklin", sans-serif;
+
+  --fontWeightLight: 300;
+  --fontWeightNormal: 600;
+  --fontWeightBold: 700;
+
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+body {
+  font-family: var(--fontFamily);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    width: 90vw;
+  }
+}
+
+header {
+  margin: 2.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgLogo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main h1 {
+  font-size: var(--fontSize3XLarge);
+  font-weight: var(--fontWeightLight);
+  color: hsl(var(--color-gray));
+}
+
+main h1 span {
+  font-weight: var(--fontWeightBold);
+  color: hsl(var(--color-very-dark-blue));
+}
+
+main p {
+  color: hsl(var(--color-very-dark-blue));
+  font-weight: var(--fontWeightLight);
+  margin: 1rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+form .email {
+  font-weight: var(--fontWeightLight);
+  border: 1px solid hsl(var(--color-pale-blue));
+  flex: 2;
+  margin-right: 1rem;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  transition: 250ms ease;
+}
+
+form .error {
+  border: 1px solid hsl(var(--color-light-red))!important;
+}
+
+form .emailError {
+  display: none;
+  position: absolute;
+  color: hsl(var(--color-light-red));
+  font-style: italic;
+  font-size: var(--fontSizeXSmall);
+  font-weight: var(--fontWeightLight);
+  left: 2rem;
+  bottom: -1.25rem;
+}
+
+form .email::placeholder {
+  font-size: var(--fontSizeSmall);
+  color: hsl(var(--color-pale-blue));
+}
+
+form .button {
+  font-size: var(--fontSizeSmall);
+  margin-right: 0.5rem;
+  border-radius: 50px;
+  padding: 1rem 0;
+  flex: 1;
+  border: none;
+  background-color: hsl(var(--color-blue));
+  color: white;
+  font-weight: var(--fontWeightNormal);
+  transition: 250ms ease;
+  cursor: pointer;
+}
+
+form .button:hover {
+  --color-blue-light: 73%;
+  background-color: hsl(
+    var(--color-blue-hue),
+    var(--color-blue-sat),
+    var(--color-blue-light)
+  );
+}
+
+.dashboard {
+  margin-top: 4rem;
+}
+
+.dashboard img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.social-media {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.social-media i {
+  font-size: var(--fontSizeSmall);
+  color: hsl(var(--color-blue));
+  cursor: pointer;
+  border-radius: 50%;
+  height: 2em;
+  width: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(var(--color-gray));
+  transition: 250ms ease;
+}
+
+.social-media i:hover {
+  background-color: hsl(var(--color-blue));
+  border: none;
+  color: white;
+}
+
+.social-media i + i {
+  margin-left: 0.5rem;
+}
+
+.copyright {
+  margin-bottom: 3rem;
+  color: hsl(var(--color-gray));
+  font-weight: var(--fontWeightLight);
+  font-size: var(--fontSizeSmall);
+}
+
+footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
