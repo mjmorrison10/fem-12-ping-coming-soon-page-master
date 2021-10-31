@@ -23,16 +23,16 @@
   --color-gray: var(--color-gray-hue) var(--color-gray-sat)
     var(--color-gray-light);
 
-  --color-very-dark-blue-hue: 209;
+  --color-very-dark-blue-hue: 209; 
   --color-very-dark-blue-sat: 33%;
-  --color-very-dark-blue-light: 12%;
+  --color-very-dark-blue-light: 12%; 
   --color-very-dark-blue: var(--color-very-dark-blue-hue)
-    var(--color-very-dark-blue-sat) var(--color-very-dark-blue-light);
+    var(--color-very-dark-blue-sat) var(--color-very-dark-blue-light); 
 
-  --fontSize3XSmall: 0.4rem;
+  --fontSize3XSmall: 0.4rem; 
   --fontSize3XSmall: 0.5rem;
   --fontSize2XSmall: 0.5rem;
-  --fontSizeXSmall: 0.75rem;
+  --fontSizeXSmall: 0.75rem; 
   --fontSizeSmall: 0.875rem;
   --fontSize: 1rem;
   --fontSizeMedium: 1.25rem;
@@ -69,7 +69,7 @@
 
 html {
   overflow: scroll;
-  overflow-x: hidden;
+  overflow-x: hidden; 
 }
 ::-webkit-scrollbar {
   width: 0; /* Remove scrollbar space */
@@ -77,16 +77,17 @@ html {
 }
 /* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
-  background: #ff0000;
+  background: #ff0000; 
 }
 
 body {
-  font-family: var(--fontFamily);
-  display: flex;
+  font-family: var(--fontFamily); 
+  display: flex; 
   flex-direction: column;
   min-height: 100%;
   width: 100%;
-}
+} 
+ 
 
 .container {
   display: flex;
@@ -160,6 +161,8 @@ form .email {
 form .error {
   border: 1px solid hsl(var(--color-light-red))!important;
 }
+
+
 
 form .emailError {
   display: none;
